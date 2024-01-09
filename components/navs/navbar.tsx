@@ -4,6 +4,7 @@ import { NAVLINKS } from "@/libs/constants";
 import Image from "next/image";
 import cn from "@/utils/twcx";
 import Link from "next/link";
+
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
@@ -68,8 +69,12 @@ const Navbar = () => {
         ))}
       </div>
       <div className="hidden lg:flex gap-x-3 xl:gap-x-5 [&>button]:border-[#FED3A6] [&>button]:border [&>button]:px-4 [&>button]:py-2 [&>button]:rounded-md [&>button:last-child]:bg-[#265D5C]  [&>button:last-child]:text-white-100 [&>button]:font-medium [&>button]:text-[#252525]">
-        <button type="button">Login</button>
-        <button type="button">Sign up</button>
+        <button type="button">
+          <Link href="/auth/login">Login</Link>
+        </button>
+        <button type="button">
+          <Link href="/"> Sign up</Link>
+        </button>
       </div>
       <div
         tabIndex={0}
